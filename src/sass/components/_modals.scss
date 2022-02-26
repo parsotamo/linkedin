@@ -1,0 +1,83 @@
+.post-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: $color-grey-dark-2;
+    color: $color-black;
+    &-content{
+        background-color: $color-white;
+        border-radius: 5px;
+        max-width: 552px;
+        margin: 40px auto 0;
+        padding: 20px 16px 0;
+        overflow-y: scroll;
+        max-height: 687px;
+        position: relative;
+        box-sizing: border-box;
+        @media(max-width: 768px){
+            width: 100%;
+        }
+    }
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-grey-dark-3;
+        color: $color-grey-dark;
+        line-height: 1.5;
+        padding-bottom: 10px;
+        h2{
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+    }
+}
+.post-create-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background-color: $color-white;
+    padding: 10px;
+    @media(max-width: 768px){
+        padding: 10px 0;
+        &-items{
+            & > *:not([class*='btn']):not(:nth-child(1)):not(:nth-child(2)){
+            display: none;
+
+            }
+        }
+    }
+    &-items{
+        display: flex;
+        align-items: center;
+        }
+        & > *:not([class*='btn']){
+            display: flex;
+            margin: 3px;
+            img{
+                cursor: pointer;
+               border-radius: 50%;
+               padding: 7px;
+               transition: all 167ms;
+               &:hover{
+                   background-color: $color-grey-dark-3;
+               }
+           }
+        }
+    }
+
+.post-upload{
+    position: relative;
+    &-content{
+        img{
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+}

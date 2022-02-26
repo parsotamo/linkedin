@@ -1,0 +1,24 @@
+.grid{
+    display: grid;
+    grid-template-areas: 'left-sidebar main right-sidebar';
+    grid-template-columns: minmax(203px, 5fr) minmax(493px, 12fr) minmax(300px, 7fr);
+    column-gap: 25px;
+    row-gap: 25px;
+    
+    @media(max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        max-width: 85%;
+        margin: 20px auto;
+    }
+}
+.left-sidebar{
+    grid-area: left-sidebar;
+}
+.main{
+    grid-area: main;
+    position: relative;
+}
+.right-sidebar{
+    grid-area: right-sidebar;
+}

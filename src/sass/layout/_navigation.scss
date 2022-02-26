@@ -1,0 +1,149 @@
+.navigation-home{
+    margin-left: auto;
+    @media(max-width: 768px){
+        background-color: $color-white;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .nav-menu{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 30px;
+        align-items: center;
+        @media(max-width: 768px){
+            justify-content: space-between;
+        }
+        .nav-item{
+            position: relative;
+            transition: all 167ms;
+            .nav-link{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                min-width: 80px;
+                min-height: 52px;
+                font-size: 13px;
+                text-decoration: none;
+                transition-duration: 167ms;
+                position: relative;
+                @media(max-width: 768px){
+                    font-size: 12px;
+                    min-width: 50px;
+                }
+                    &.active::after{
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        width: 95%;
+                        height: 2px;
+                        background-color: #000;
+                        transform: translateX(-50%);
+                    }
+                span{
+                    color: $color-grey;
+                }
+                &:hover, &:active{
+                    background-color: $color-grey-light-1;
+                    span{
+                        color: $color-grey-dark;
+                    }
+                }
+                .user-photo{
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                }
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .sign-out{
+                position: absolute;
+                left: 0;
+                top: 45px;
+                background: $color-white;
+                visibility: hidden;
+                opacity: 0;
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0 0 5px 5px;
+                a{
+                    color: $color-grey;
+                    text-decoration: none;
+                    font-size: 13px;
+                }
+                &:hover, &:active{
+                    opacity: 1;
+                    visibility: visible;
+                   
+                }
+            }
+            &:hover{
+                .sign-out{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .message-item{
+            @media(max-width: 768px){
+                display: none;
+            } 
+        }
+        .add-item{
+            @media(min-width: 768px){
+                display: none;
+            }
+            img{
+                width: 32px;
+            }
+        }
+        .user-item{
+            @media(max-width: 768px){
+                display: none !important;
+            }
+        }
+        .work-item{
+            border-left: 1px solid $color-grey-dark-3;
+            @media(max-width: 768px){
+                display: none;
+            }
+        }
+        .job-item{
+            @media(max-width:768px){
+                order: 1;
+            }
+        }
+    }
+}
+span.message-item{
+    display: none;
+    cursor: pointer;
+    @media(max-width: 768px){
+        display: inline-block;
+        position: fixed;
+        top: 15px;
+        right: 25px;
+
+    }
+}
+
+.navigation-login{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}

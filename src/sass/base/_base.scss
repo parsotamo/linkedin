@@ -1,0 +1,16 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html{
+    font-size: 100%;
+}
+body{
+    background-color: $bg-color;
+    font-family: Arial, sans-serif;
+}

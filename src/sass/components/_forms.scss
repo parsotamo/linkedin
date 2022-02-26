@@ -1,0 +1,43 @@
+.google-form{
+    width: 50%;
+    display: flex;
+    @media(max-width: 768px){
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.navigation-search{
+    max-width: 280px;
+    position: relative;
+    input{
+        background-color: $color-grey-light-1;
+        border-radius: 2px;
+        width: 218px;
+        padding: 0 8px 0 40px;
+        line-height: 1.75;
+        font-weight: 400;
+        font-size: 14px;
+        height: 34px;
+        border-color: $color-light-1;
+        vertical-align: text-top;
+    }
+    .search-btn{
+        position: absolute;
+        left: 10px;
+        top: 7px;
+        border-radius: 0 2px 2px 0;
+        pointer-events: none;
+        img{
+            width: 20px;
+            z-index: 10;
+        }
+    }
+}
+
+.post-content{
+    width: 100%;
+    padding: 20px 0;
+    color: $color-black;
+    font-size: 16px;
+}
